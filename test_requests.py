@@ -3,10 +3,8 @@ import requests
 import time
 try:
     mobile = sys.argv[1]
-    count = sys.argv[2]
 except:
     mobile = input('手机号:')
-    count = input('次数:')
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36'
 }
@@ -16,7 +14,7 @@ def get_time():
 sms_url = 'https://opapi2.nn.com/u-mobile/sendSms'
 data = {
     "countryCode" : 86,
-    "telNum" : "13574801877"
+    "telNum" : mobile
 }
 special_headers = {
     "token" : "600e862372974222bf1af8849f38fa28",
